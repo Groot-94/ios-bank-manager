@@ -23,7 +23,7 @@
 ## 개발자 소개
 |현이|그루트|
 |:---:|:---:|
-| <image src = "https://i.imgur.com/0UjNUFH.jpg" width="250" height="250">| <image src = "https://i.imgur.com/Cxc3e7j.jpg" width="250" height="250"> |
+| <img src = "https://i.imgur.com/0UjNUFH.jpg" width="250" height="250">| <img src = "https://i.imgur.com/Cxc3e7j.jpg" width="250" height="250"> |
 |[현이](https://github.com/seohyeon2?tab=repositories)|[그루트](https://github.com/Groot-94)|
 
 
@@ -69,6 +69,7 @@
 - [x] 스레드(Thread) 개념에 대한 이해
 - [x] GCD를 활용한 동시성 프로그래밍 구현
 - [x] 동기(Synchronous)와 비동기(Asynchronous) 동작의 구현 및 적용
+
 ## 기능설명
 
 ### Node
@@ -117,28 +118,38 @@ CustomerQueue의 에러 타입 구현.
 ### STEP 1 
 #### Command Line Tool에서 Unit Test를 위해서 `@testable import` 을 사용할 때 모듈을 찾지 못하는 문제가 발생.
 
-<image src = "https://i.imgur.com/0KmmZb2.png" width="500" height="100">   
+<img src = "https://i.imgur.com/0KmmZb2.png" width="500" height="100">   
           
 - 문제 해결을 위한 시도 
     - Unit Testing Bundle을 사용해서 직접 프로젝트 target을 추가했다.
-    <image src = "https://i.imgur.com/6B7tJpG.png" width="500" height="300"> 
+    
+    <img src = "https://i.imgur.com/6B7tJpG.png" width="500" height="300"> 
+    
     - Scheme도 직접 추가하는 방법을 사용.
+    
         1️⃣
-        <image src = "https://i.imgur.com/fZ3vgDw.png" width="500" height="400">
+        
+        <img src = "https://i.imgur.com/fZ3vgDw.png" width="500" height="400">
             
         2️⃣
-        <image src = "https://i.imgur.com/uDCXPub.png" width="500" height="400">
+        
+        <img src = "https://i.imgur.com/uDCXPub.png" width="500" height="400">
         
     - 마지막으로 테스트에 사용되는 클래스의 target Target Membership을 추가했다.
-    <image src = "https://i.imgur.com/9b9xxIp.png" width="500" height="700">
+    
+    <img src = "https://i.imgur.com/9b9xxIp.png" width="500" height="700">
+    
 - 테스트 파일에서 `@testable import`를 사용하지 않아도 문제가 일어나지 않았다.
-<image src = "https://i.imgur.com/kFp6l0O.png" width="500" height="500">
+
+<img src = "https://i.imgur.com/kFp6l0O.png" width="500" height="500">
+
 [참고 페이지](https://jwonylee.tistory.com/entry/XCode-Swift-Command-Line-Tool-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90%EC%84%9C-%EC%9C%A0%EB%8B%9B-%ED%85%8C%EC%8A%A4%ED%8A%B8-%ED%95%98%EA%B8%B0)
+
 ### STEP 3
 #### 비동기 처리 시 모든 업무시작이 출력된 후 업무완료가 출력되는 문제  
 |문제가 발생한 출력|정상 출력|
 |:---:|:---:|
-|<image src = "https://i.imgur.com/ZJf3rBZ.png" width="200" height="500">    |    <image src = "https://i.imgur.com/UthR4c6.png" width="200" height="500">|
+|<img src = "https://i.imgur.com/ZJf3rBZ.png" width="200" height="500">    |    <img src = "https://i.imgur.com/UthR4c6.png" width="200" height="500">|
     
 - 원인 분석
      - 스레드의 수를 제어하지 않고 실행했기 때문에, work 함수를 workQueue에 넣어주는 만큼 스레드가 할당된다. 그러므로 모든 업무를 시작하는 시점이 거의 동일하게 진행된다는 점을 발견.
